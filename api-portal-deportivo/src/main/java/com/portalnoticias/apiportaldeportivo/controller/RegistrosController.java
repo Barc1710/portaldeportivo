@@ -81,7 +81,7 @@ public class RegistrosController {
             String token = jwtUtil.generarToken(clienteId);
 
             Registros registro = user.get();
-            registro.setAcces_token(token); // guardar el token en la CLASE
+            registro.setAccessToken(token); // guardar el token en la CLASE
             serviceRegistros.guardar(registro); // HACE PERSISTENCIA
 
             return ResponseEntity.ok(Collections

@@ -32,7 +32,7 @@ public class JwtFilter extends GenericFilter {
             String token = header.substring(7);
             Optional<Registros> match = registrosRepository
                     .findAll().stream()
-                    .filter(r -> token.equals(r.getAcces_token()))
+                    .filter(r -> token.equals(r.getAccessToken()))
                     .findFirst();
 
             if (match.isPresent()) {
